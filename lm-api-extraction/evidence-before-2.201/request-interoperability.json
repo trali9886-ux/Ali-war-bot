@@ -1,0 +1,7 @@
+{
+  "reference_commit": "7edf561bae136e918d7d2c0322b780a249da1ed8",
+  "scope": "isolated RequestMapData with send stub; no networking or encryption",
+  "length": 49,
+  "frame_plaintext_hex": "310099082b0000000400000100fe03ff030000000000000000000000000000000000000000000000000000000000000000",
+  "match": true
+}

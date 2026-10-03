@@ -1,0 +1,2 @@
+# No OCR/image dependencies are required by scan.py v7.
+# Keep the Frida version already installed in .venv matched to your frida-server.

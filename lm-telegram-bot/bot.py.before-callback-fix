@@ -1,0 +1,207 @@
+"""Small, predictable Telegram screens with one card and four player actions."""
+from datetime import datetime, timezone
+import html
+import secrets
+from telegram import TelegramError
+
+
+def esc(value): return html.escape(str(value),quote=False)
+
+
+def amount(value):
+    if value is None: return '—'
+    for limit,suffix in [(10**9,'B'),(10**6,'M'),(10**3,'K')]:
+        if value>=limit: return '{:.2f}{}'.format(value/limit,suffix)
+    return str(value)
+
+
+def short_time(value):
+    return datetime.fromisoformat(value).strftime('%d %b · %H:%M UTC') if value else 'No observations yet'
+
+
+def button(label,data):
+    result={'text':label,'callback_data':data}
+    action=data.split(':',1)[0]
+    if action in ('track','info','activity'):
+        result['style']={'track':'danger','info':'primary','activity':'success'}[action]
+    return result
+
+
+def keyboard(*rows): return {'inline_keyboard':list(rows)}
+
+
+def location(player):
+    xy=player.get('location')
+    kingdom=player.get('kingdom')
+    if xy and kingdom is not None: return 'K{} · X{} Y{}'.format(kingdom,*xy)
+    if kingdom is not None: return 'K{} · coordinates unavailable'.format(kingdom)
+    return 'Location not verified'
+
+
+def card(player):
+    name=('['+player['guild']+'] ' if player['guild'] else '')+player['name']
+    return '<b>{}</b>\n📍 {}\n✊ Might {}   ⚔️ Kills {}\n\n<i>{}</i>'.format(
+        esc(name),esc(location(player)),amount(player.get('might')),amount(player.get('kills')),
+        esc(('Saved cache' if player.get('source','cache')=='cache' else 'Unverified packet data')+' · '+short_time(player['observed'])))
+
+
+class Bot:
+    def __init__(self, store, api, pair_code=None):
+        self.store,self.api=store,api
+        self.pair_code=pair_code or secrets.token_hex(4)
+
+    def owner(self): return self.store.setting('owner')
+
+    def allowed(self, chat, user):
+        owner=self.owner()
+        if owner is None: return False
+        if chat.get('type')=='private': return chat['id']==owner and user==owner
+        return chat['id'] in self.store.setting('groups',[])
+
+    def show(self, chat, body, markup, message=None):
+        payload=dict(chat_id=chat,text=body,parse_mode='HTML',reply_markup=markup)
+        if message:
+            try:
+                return self.api.call('editMessageText',message_id=message,**payload)
+            except TelegramError as exc:
+                if exc.code==400 and exc.reason=='unchanged': return None
+                if exc.code==400 and exc.reason=='missing': return self.api.call('sendMessage',**payload)
+                raise
+        return self.api.call('sendMessage',**payload)
+
+    def home(self, chat, message=None):
+        count,_=self.store.stats()
+        body='<b>Lords Tracker</b>\nFind a player. Follow useful updates.\n\n{} saved records'.format(count)
+        return self.show(chat,body,keyboard(
+            [button('🔎 Find player','search'),button('👥 Players','list:0')],
+            [button('⭐ Following','followed:0'),button('📡 Status','status')]),message)
+
+    def player(self, chat, player_id, message=None, note=''):
+        player=self.store.get(player_id)
+        if not player: return self.home(chat,message)
+        followed=player_id in self.store.following(chat)
+        markup=keyboard(
+            [button('⭐ Following' if followed else '🔔 Track', 'track:{}:{}'.format(player_id,0 if followed else 1)),button('ℹ️ Info','info:'+str(player_id))],
+            [button('🛡 Equipment','gear:'+str(player_id)),button('📊 Activity','activity:'+str(player_id))],
+            [button('‹ Players','list:0'),button('⌂ Menu','home')])
+        return self.show(chat,card(player)+(('\n\n'+esc(note)) if note else ''),markup,message)
+
+    def listing(self, chat, page=0, followed=False, message=None):
+        query='' if followed else self.store.setting('query:'+str(chat),'')
+        ids,total=self.store.search(query,chat if followed else None,page)
+        title='Following' if followed else ('Search: '+query if query else 'Players')
+        body='<b>{}</b>\n{}'.format(esc(title),'Tap a name to open its card.' if ids else 'No matches yet.')
+        rows=[]
+        for identifier in ids:
+            p=self.store.get(identifier)
+            label=('['+p['guild']+'] ' if p['guild'] else '')+p['name']
+            rows.append([button(label[:55],'player:'+str(identifier))])
+        prefix='followed' if followed else 'list'
+        nav=[]
+        if page>0: nav.append(button('‹ Previous',prefix+':'+str(page-1)))
+        if (page+1)*5<total: nav.append(button('Next ›',prefix+':'+str(page+1)))
+        if nav: rows.append(nav)
+        if ids: body+='\n{}–{} of {}'.format(page*5+1,page*5+len(ids),total)
+        rows.append([button('🔎 Search','search'),button('⌂ Menu','home')])
+        return self.show(chat,body,keyboard(*rows),message)
+
+    def detail(self, chat, player_id, section, message=None):
+        p=self.store.get(player_id)
+        if not p: return self.home(chat,message)
+        if section=='info':
+            body=card(p)+'\n\n<b>Player details</b>\nCastle level: {}\nShield: unavailable\nOnline status: unavailable'.format(p.get('castle_level') if p.get('castle_level') is not None else '—')
+            body+='\n\nValues are from saved observations.'
+        elif section=='gear':
+            body='<b>Equipment · {}</b>\n\nNo equipment has been captured yet.'.format(esc(p['name']))
+        else:
+            events=self.store.history(player_id)
+            body='<b>Activity · {}</b>\n<i>Recorded changes</i>\n\n'.format(esc(p['name']))
+            body+='\n\n'.join('{}\n{}'.format(esc(short_time(e['observed'])),esc(e['label'])) for e in events) or 'No changes recorded yet.'
+        return self.show(chat,body,keyboard([button('‹ Player','player:'+str(player_id)),button('⌂ Menu','home')]),message)
+
+    def handle(self, update):
+        callback=update.get('callback_query')
+        message=callback.get('message') if callback else update.get('message')
+        if not isinstance(message,dict) or not isinstance(message.get('chat'),dict): return
+        chat=message['chat']; chat_id=chat['id']
+        user=(callback.get('from',{}) if callback else message.get('from',{})).get('id')
+        content=message.get('text','') if not callback else ''
+        if callback:
+            self.api.call('answerCallbackQuery',callback_query_id=callback['id'],
+                          **({} if self.allowed(chat,user) else {'text':'This bot is private.'}))
+        if self.owner() is None:
+            if chat.get('type')=='private' and user==chat_id and content=='/start '+self.pair_code:
+                self.store.set_setting('owner',user)
+                return self.home(chat_id)
+            return  # unpaired users cannot read observations
+        if not self.allowed(chat,user):
+            # Only the paired owner can allow a group explicitly.
+            if user==self.owner() and chat.get('type') in ('group','supergroup') and content.split('@',1)[0]=='/allowgroup':
+                groups=self.store.setting('groups',[])
+                self.store.set_setting('groups',sorted(set(groups+[chat_id])))
+                return self.home(chat_id)
+            return
+        if callback:
+            data=callback.get('data','')
+            mid=message.get('message_id')
+            if data=='home': self.store.set_setting('query:'+str(chat_id),'');return self.home(chat_id,mid)
+            if data=='search':
+                self.store.set_setting('waiting:'+str(chat_id),True)
+                if chat.get('type')!='private':
+                    return self.show(chat_id,'<b>Find player</b>\nReply with a player name or guild tag.',
+                                     {'force_reply':True,'selective':False})
+                return self.show(chat_id,'<b>Find player</b>\nSend a player name or guild tag.',keyboard([button('Cancel','home')]),mid)
+            if data=='status':
+                count,last=self.store.stats()
+                body='<b>Tracker status</b>\n{} saved records\nLatest observation: {}\n\n'.format(count,esc(short_time(last)))
+                body+=('Waiting for game data. Start the collector on your PC.' if not count else 'Shows collected observations. Whole-kingdom coverage is not confirmed.')
+                return self.show(chat_id,body,keyboard([button('Refresh','status'),button('⌂ Menu','home')]),mid)
+            parts=data.split(':')
+            try:
+                if parts[0] in ('list','followed') and len(parts)==2:
+                    page=int(parts[1])
+                    if not 0<=page<=10000:return
+                    return self.listing(chat_id,page,parts[0]=='followed',mid)
+                if parts[0] in ('player','info','gear','activity','track') and len(parts) in (2,3):
+                    player_id=int(parts[1])
+                    if not self.store.get(player_id): return self.home(chat_id,mid)
+                    if parts[0]=='player':return self.player(chat_id,player_id,mid)
+                    if parts[0]=='track' and len(parts)==3 and parts[2] in ('0','1'):
+                        enabled=parts[2]=='1';self.store.follow(chat_id,player_id,enabled)
+                        return self.player(chat_id,player_id,mid,'Following this saved location.' if enabled else 'Updates stopped.')
+                    if parts[0] in ('info','gear','activity'):return self.detail(chat_id,player_id,parts[0],mid)
+            except (ValueError,OverflowError): return
+        else:
+            command=content.split()[0].split('@')[0] if content else ''
+            if command in ('/start','/menu'):
+                self.store.set_setting('waiting:'+str(chat_id),False)
+                self.store.set_setting('query:'+str(chat_id),'')
+                return self.home(chat_id)
+            if command=='/removegroup' and user==self.owner() and chat.get('type')!='private':
+                self.store.set_setting('groups',[g for g in self.store.setting('groups',[]) if g!=chat_id])
+                with self.store.db:
+                    self.store.db.execute('DELETE FROM follows WHERE chat=?',(chat_id,))
+                    self.store.db.execute('DELETE FROM alerts WHERE chat=?',(chat_id,))
+                return
+            if content and len(content)<=100 and not content.startswith('/'):
+                self.store.set_setting('query:'+str(chat_id),content.strip())
+                self.store.set_setting('waiting:'+str(chat_id),False)
+                return self.listing(chat_id)
+            return self.home(chat_id)
+
+    def alerts(self):
+        for row in self.store.db.execute('SELECT * FROM alerts ORDER BY observed LIMIT 5').fetchall():
+            chat=row['chat']
+            if chat!=self.owner() and chat not in self.store.setting('groups',[]): continue
+            p=self.store.get(row['player'])
+            if not p: continue
+            body='<b>Update · {}</b>\n{}\n\n<i>{}</i>'.format(esc(p['name']),esc(row['label']),esc(short_time(row['observed'])))
+            try:
+                self.show(chat,body,keyboard([button('Open player','player:'+str(p['id'])),button('⌂ Menu','home')]))
+            except TelegramError as exc:
+                if exc.code==403:
+                    self.store.follow(chat,p['id'],False)
+                    continue
+                raise
+            with self.store.db:
+                self.store.db.execute('DELETE FROM alerts WHERE chat=? AND player=?',(chat,p['id']))

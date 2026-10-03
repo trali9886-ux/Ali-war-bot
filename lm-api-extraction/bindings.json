@@ -1,0 +1,590 @@
+{
+  "provenance": "Method addresses from supplied handoff selected-types.json; extractor rechecks metadata names and exact native build before using them.",
+  "source_sha256": "22ca2993aae3249f9ab9aa47cb0d65252ee2a2f0c4da31b1777c918489b2fa02",
+  "methods": [
+    {
+      "type": "MapManager",
+      "name": ".ctor",
+      "index": 6984,
+      "declaring_type": 1415,
+      "address": "0x44cf4d4",
+      "parameters": []
+    },
+    {
+      "type": "MapManager",
+      "name": "RecvMapInfoPlus",
+      "index": 7033,
+      "declaring_type": 1415,
+      "address": "0x43fa3a8",
+      "parameters": [
+        {
+          "name": "MP",
+          "type_index": 30544,
+          "type": "MessagePacket"
+        }
+      ]
+    },
+    {
+      "type": "MapManager",
+      "name": "setLastZoneInfo",
+      "index": 7046,
+      "declaring_type": 1415,
+      "address": "0x44de8dc",
+      "parameters": [
+        {
+          "name": "nowZoneIDNum",
+          "type_index": 21901,
+          "type": "byte"
+        },
+        {
+          "name": "nowZoneID",
+          "type_index": 18739,
+          "type": "ushort[]"
+        },
+        {
+          "name": "renew",
+          "type_index": 21568,
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "type": "MapManager",
+      "name": "sendRequestMapdataMsg",
+      "index": 7049,
+      "declaring_type": 1415,
+      "address": "0x44de9d8",
+      "parameters": [
+        {
+          "name": "renew",
+          "type_index": 21568,
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "type": "MapManager",
+      "name": "IsCityOrCamp",
+      "index": 7054,
+      "declaring_type": 1415,
+      "address": "0x44df81c",
+      "parameters": [
+        {
+          "name": "layoutMapInfoID",
+          "type_index": 38245,
+          "type": "uint"
+        }
+      ]
+    },
+    {
+      "type": "MapManager",
+      "name": "UpdateWaitZone",
+      "index": 7057,
+      "declaring_type": 1415,
+      "address": "0x44dfa6c",
+      "parameters": []
+    },
+    {
+      "type": "MapManager",
+      "name": "RequestKingdomData",
+      "index": 7060,
+      "declaring_type": 1415,
+      "address": "0x44dfb50",
+      "parameters": [
+        {
+          "name": "cx",
+          "type_index": 28820,
+          "type": "int"
+        },
+        {
+          "name": "cy",
+          "type_index": 28820,
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "type": "MessagePacket",
+      "name": ".ctor",
+      "index": 48830,
+      "declaring_type": 10486,
+      "address": "0x46bb21c",
+      "parameters": [
+        {
+          "name": "Max",
+          "type_index": 38239,
+          "type": "ushort"
+        }
+      ]
+    },
+    {
+      "type": "MessagePacket",
+      "name": ".ctor",
+      "index": 48831,
+      "declaring_type": 10486,
+      "address": "0x46c219c",
+      "parameters": [
+        {
+          "name": "Read",
+          "type_index": 15526,
+          "type": "byte[]&"
+        },
+        {
+          "name": "off",
+          "type_index": 28820,
+          "type": "int"
+        },
+        {
+          "name": "len",
+          "type_index": 28820,
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "type": "MessagePacket",
+      "name": ".ctor",
+      "index": 48832,
+      "declaring_type": 10486,
+      "address": "0x46c2254",
+      "parameters": [
+        {
+          "name": "Buff",
+          "type_index": 4366,
+          "type": "Buffer`1<...>"
+        }
+      ]
+    },
+    {
+      "type": "MessagePacket",
+      "name": "AddSeqId",
+      "index": 48833,
+      "declaring_type": 10486,
+      "address": "0x46c2284",
+      "parameters": []
+    },
+    {
+      "type": "MessagePacket",
+      "name": "Add",
+      "index": 48834,
+      "declaring_type": 10486,
+      "address": "0x46bb52c",
+      "parameters": [
+        {
+          "name": "data",
+          "type_index": 21901,
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "type": "MessagePacket",
+      "name": "Add",
+      "index": 48835,
+      "declaring_type": 10486,
+      "address": "0x46bb3a8",
+      "parameters": [
+        {
+          "name": "data",
+          "type_index": 38224,
+          "type": "ushort"
+        }
+      ]
+    },
+    {
+      "type": "MessagePacket",
+      "name": "Add",
+      "index": 48836,
+      "declaring_type": 10486,
+      "address": "0x46c2374",
+      "parameters": [
+        {
+          "name": "data",
+          "type_index": 28804,
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "type": "MessagePacket",
+      "name": "Add",
+      "index": 48837,
+      "declaring_type": 10486,
+      "address": "0x46c23f0",
+      "parameters": [
+        {
+          "name": "data",
+          "type_index": 38245,
+          "type": "uint"
+        }
+      ]
+    },
+    {
+      "type": "MessagePacket",
+      "name": "Add",
+      "index": 48838,
+      "declaring_type": 10486,
+      "address": "0x46c1fa4",
+      "parameters": [
+        {
+          "name": "data",
+          "type_index": 28820,
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "type": "MessagePacket",
+      "name": "Add",
+      "index": 48839,
+      "declaring_type": 10486,
+      "address": "0x46c23f4",
+      "parameters": [
+        {
+          "name": "data",
+          "type_index": 38265,
+          "type": "ulong"
+        }
+      ]
+    },
+    {
+      "type": "MessagePacket",
+      "name": "Add",
+      "index": 48840,
+      "declaring_type": 10486,
+      "address": "0x46bc308",
+      "parameters": [
+        {
+          "name": "data",
+          "type_index": 28856,
+          "type": "long"
+        }
+      ]
+    },
+    {
+      "type": "MessagePacket",
+      "name": "Add",
+      "index": 48841,
+      "declaring_type": 10486,
+      "address": "0x46c23f8",
+      "parameters": [
+        {
+          "name": "data",
+          "type_index": 34750,
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "type": "MessagePacket",
+      "name": "Add",
+      "index": 48842,
+      "declaring_type": 10486,
+      "address": "0x46bb3ac",
+      "parameters": [
+        {
+          "name": "data",
+          "type_index": 35486,
+          "type": "string"
+        },
+        {
+          "name": "size",
+          "type_index": 28820,
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "type": "MessagePacket",
+      "name": "Add",
+      "index": 48843,
+      "declaring_type": 10486,
+      "address": "0x46c2400",
+      "parameters": [
+        {
+          "name": "data",
+          "type_index": 17691,
+          "type": "byte[]"
+        },
+        {
+          "name": "startIdx",
+          "type_index": 28844,
+          "type": "int"
+        },
+        {
+          "name": "len",
+          "type_index": 28844,
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "type": "MessagePacket",
+      "name": "ReadByte",
+      "index": 48845,
+      "declaring_type": 10486,
+      "address": "0x46bbf90",
+      "parameters": [
+        {
+          "name": "iCount",
+          "type_index": 28844,
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "type": "MessagePacket",
+      "name": "ReadUShort",
+      "index": 48846,
+      "declaring_type": 10486,
+      "address": "0x46bbe78",
+      "parameters": [
+        {
+          "name": "iCount",
+          "type_index": 28844,
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "type": "MessagePacket",
+      "name": "ReadULong",
+      "index": 48851,
+      "declaring_type": 10486,
+      "address": "0x46c27f0",
+      "parameters": [
+        {
+          "name": "iCount",
+          "type_index": 28844,
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "type": "MessagePacket",
+      "name": "Send",
+      "index": 48858,
+      "declaring_type": 10486,
+      "address": "0x46bb598",
+      "parameters": [
+        {
+          "name": "Force",
+          "type_index": 21590,
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "type": "NetworkPeeper",
+      "name": "View",
+      "index": 48872,
+      "declaring_type": 10489,
+      "address": "0x46c34a4",
+      "parameters": [
+        {
+          "name": "Id",
+          "type_index": 38239,
+          "type": "ushort"
+        },
+        {
+          "name": "Oid",
+          "type_index": 38260,
+          "type": "uint"
+        },
+        {
+          "name": "protocolType",
+          "type_index": 32767,
+          "type": "Protocol"
+        },
+        {
+          "name": "Force",
+          "type_index": 21590,
+          "type": "bool"
+        },
+        {
+          "name": "InMaster",
+          "type_index": 21916,
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "type": "NetworkPeeper",
+      "name": "Enter",
+      "index": 48881,
+      "declaring_type": 10489,
+      "address": "0x46c3e30",
+      "parameters": [
+        {
+          "name": "MP",
+          "type_index": 30544,
+          "type": "MessagePacket"
+        },
+        {
+          "name": "blinklogin",
+          "type_index": 21590,
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "type": "NetworkPeeper",
+      "name": "Cipher",
+      "index": 48888,
+      "declaring_type": 10489,
+      "address": "0x46c2d34",
+      "parameters": [
+        {
+          "name": "Codon",
+          "type_index": 17691,
+          "type": "byte[]"
+        },
+        {
+          "name": "Offset",
+          "type_index": 28820,
+          "type": "int"
+        },
+        {
+          "name": "Size",
+          "type_index": 28820,
+          "type": "int"
+        },
+        {
+          "name": "Durex",
+          "type_index": 28844,
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "type": "NetworkManager",
+      "name": "EnterTheMatrix",
+      "index": 48901,
+      "declaring_type": 10491,
+      "address": "0x46c611c",
+      "parameters": [
+        {
+          "name": "IP",
+          "type_index": 35486,
+          "type": "string"
+        },
+        {
+          "name": "Port",
+          "type_index": 28820,
+          "type": "int"
+        },
+        {
+          "name": "blinklogin",
+          "type_index": 21590,
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "type": "NetworkManager",
+      "name": "LogmeIn",
+      "index": 48905,
+      "declaring_type": 10491,
+      "address": "0x46c8950",
+      "parameters": [
+        {
+          "name": "IGG",
+          "type_index": 35486,
+          "type": "string"
+        },
+        {
+          "name": "Asskey",
+          "type_index": 35486,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "type": "NetworkManager",
+      "name": "Send",
+      "index": 48916,
+      "declaring_type": 10491,
+      "address": "0x46c3368",
+      "parameters": [
+        {
+          "name": "MP",
+          "type_index": 30544,
+          "type": "MessagePacket"
+        }
+      ]
+    },
+    {
+      "type": "NetworkManager",
+      "name": "Cipher",
+      "index": 48917,
+      "declaring_type": 10491,
+      "address": "0x46c3058",
+      "parameters": [
+        {
+          "name": "Codon",
+          "type_index": 17691,
+          "type": "byte[]"
+        },
+        {
+          "name": "Offset",
+          "type_index": 28820,
+          "type": "int"
+        },
+        {
+          "name": "Size",
+          "type_index": 28820,
+          "type": "int"
+        },
+        {
+          "name": "Durex",
+          "type_index": 28844,
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "type": "NetworkManager",
+      "name": "ConnectEx",
+      "index": 48929,
+      "declaring_type": 10491,
+      "address": "0x46ca108",
+      "parameters": []
+    },
+    {
+      "type": "NetworkManager",
+      "name": "SendPacket",
+      "index": 48934,
+      "declaring_type": 10491,
+      "address": "0x46cae60",
+      "parameters": [
+        {
+          "name": "pak",
+          "type_index": 30544,
+          "type": "MessagePacket"
+        }
+      ]
+    },
+    {
+      "type": "NetworkManager",
+      "name": "CheckBuffer",
+      "index": 48935,
+      "declaring_type": 10491,
+      "address": "0x46cb0a8",
+      "parameters": []
+    },
+    {
+      "type": "NetworkManager",
+      "name": "ViewKingdom",
+      "index": 48941,
+      "declaring_type": 10491,
+      "address": "0x46cc8b8",
+      "parameters": [
+        {
+          "name": "KingdomId",
+          "type_index": 38224,
+          "type": "ushort"
+        }
+      ]
+    }
+  ]
+}

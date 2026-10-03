@@ -1,0 +1,1369 @@
+{
+  "nuget_version": "1.0.8",
+  "nuget_release_notes": "game v2.29.118",
+  "nuget_sha256": "6a178028f7545a10cc182d2a6fe3dc5bec00d9e0f9274f795a5f026641715aff",
+  "dll_sha256": "910ce41acb86d700ca42222b72db255b7ea1214c0ff6c21fa0b25ad90684519b",
+  "source_commit": "e9b7ce5595c6d8b5c0bdf0835e591b4022aff9b2",
+  "type_references": [
+    {
+      "namespace": "System.Runtime.CompilerServices",
+      "name": "ExtensionAttribute"
+    },
+    {
+      "namespace": "System.Runtime.CompilerServices",
+      "name": "CompilationRelaxationsAttribute"
+    },
+    {
+      "namespace": "System.Runtime.CompilerServices",
+      "name": "RuntimeCompatibilityAttribute"
+    },
+    {
+      "namespace": "System.Diagnostics",
+      "name": "DebuggableAttribute"
+    },
+    {
+      "namespace": "",
+      "name": "DebuggingModes"
+    },
+    {
+      "namespace": "System.Reflection",
+      "name": "AssemblyTitleAttribute"
+    },
+    {
+      "namespace": "System.Reflection",
+      "name": "AssemblyDescriptionAttribute"
+    },
+    {
+      "namespace": "System.Reflection",
+      "name": "AssemblyConfigurationAttribute"
+    },
+    {
+      "namespace": "System.Reflection",
+      "name": "AssemblyCompanyAttribute"
+    },
+    {
+      "namespace": "System.Reflection",
+      "name": "AssemblyProductAttribute"
+    },
+    {
+      "namespace": "System.Reflection",
+      "name": "AssemblyCopyrightAttribute"
+    },
+    {
+      "namespace": "System.Reflection",
+      "name": "AssemblyTrademarkAttribute"
+    },
+    {
+      "namespace": "System.Runtime.InteropServices",
+      "name": "ComVisibleAttribute"
+    },
+    {
+      "namespace": "System.Runtime.InteropServices",
+      "name": "GuidAttribute"
+    },
+    {
+      "namespace": "System.Reflection",
+      "name": "AssemblyFileVersionAttribute"
+    },
+    {
+      "namespace": "System.Runtime.Versioning",
+      "name": "TargetFrameworkAttribute"
+    },
+    {
+      "namespace": "System",
+      "name": "Object"
+    },
+    {
+      "namespace": "System",
+      "name": "Type"
+    },
+    {
+      "namespace": "System.Runtime.CompilerServices",
+      "name": "AsyncStateMachineAttribute"
+    },
+    {
+      "namespace": "System.Threading.Tasks",
+      "name": "Task`1"
+    },
+    {
+      "namespace": "System.Runtime.CompilerServices",
+      "name": "CompilerGeneratedAttribute"
+    },
+    {
+      "namespace": "System",
+      "name": "Func`1"
+    },
+    {
+      "namespace": "System",
+      "name": "ValueType"
+    },
+    {
+      "namespace": "System.Runtime.CompilerServices",
+      "name": "IAsyncStateMachine"
+    },
+    {
+      "namespace": "System.Runtime.CompilerServices",
+      "name": "TaskAwaiter`1"
+    },
+    {
+      "namespace": "System",
+      "name": "Exception"
+    },
+    {
+      "namespace": "System.Runtime.CompilerServices",
+      "name": "AsyncTaskMethodBuilder`1"
+    },
+    {
+      "namespace": "System.Diagnostics",
+      "name": "DebuggerHiddenAttribute"
+    },
+    {
+      "namespace": "System.Collections.Generic",
+      "name": "List`1"
+    },
+    {
+      "namespace": "System.Net",
+      "name": "WebClient"
+    },
+    {
+      "namespace": "System.Text",
+      "name": "StringBuilder"
+    },
+    {
+      "namespace": "System.Diagnostics",
+      "name": "Process"
+    },
+    {
+      "namespace": "System.Drawing",
+      "name": "Bitmap"
+    },
+    {
+      "namespace": "System.Drawing",
+      "name": "Color"
+    },
+    {
+      "namespace": "System.Drawing.Imaging",
+      "name": "PixelFormat"
+    },
+    {
+      "namespace": "System.Drawing",
+      "name": "Graphics"
+    },
+    {
+      "namespace": "System.Drawing",
+      "name": "Size"
+    },
+    {
+      "namespace": "System.Drawing",
+      "name": "Rectangle"
+    },
+    {
+      "namespace": "System.Diagnostics",
+      "name": "ProcessModule"
+    },
+    {
+      "namespace": "System",
+      "name": "FlagsAttribute"
+    },
+    {
+      "namespace": "System",
+      "name": "Enum"
+    },
+    {
+      "namespace": "System",
+      "name": "Math"
+    },
+    {
+      "namespace": "System.Drawing",
+      "name": "Image"
+    },
+    {
+      "namespace": "System",
+      "name": "String"
+    },
+    {
+      "namespace": "System",
+      "name": "Console"
+    },
+    {
+      "namespace": "System.Text.RegularExpressions",
+      "name": "Regex"
+    },
+    {
+      "namespace": "System.Text.RegularExpressions",
+      "name": "Match"
+    },
+    {
+      "namespace": "System.Text.RegularExpressions",
+      "name": "GroupCollection"
+    },
+    {
+      "namespace": "System.Text.RegularExpressions",
+      "name": "Group"
+    },
+    {
+      "namespace": "System.Text.RegularExpressions",
+      "name": "Capture"
+    },
+    {
+      "namespace": "System",
+      "name": "Convert"
+    },
+    {
+      "namespace": "System",
+      "name": "Int32"
+    },
+    {
+      "namespace": "System",
+      "name": "IDisposable"
+    },
+    {
+      "namespace": "System",
+      "name": "ArgumentOutOfRangeException"
+    },
+    {
+      "namespace": "System",
+      "name": "ArgumentException"
+    },
+    {
+      "namespace": "System",
+      "name": "IntPtr"
+    },
+    {
+      "namespace": "System.Linq",
+      "name": "Enumerable"
+    },
+    {
+      "namespace": "System.Collections.Generic",
+      "name": "IEnumerable`1"
+    },
+    {
+      "namespace": "System.Diagnostics",
+      "name": "ProcessModuleCollection"
+    },
+    {
+      "namespace": "System.Collections",
+      "name": "ReadOnlyCollectionBase"
+    },
+    {
+      "namespace": "System.Windows.Forms",
+      "name": "MessageBox"
+    },
+    {
+      "namespace": "System.Windows.Forms",
+      "name": "DialogResult"
+    },
+    {
+      "namespace": "System",
+      "name": "UIntPtr"
+    },
+    {
+      "namespace": "System",
+      "name": "Byte"
+    },
+    {
+      "namespace": "System.Text",
+      "name": "Encoding"
+    },
+    {
+      "namespace": "System",
+      "name": "BitConverter"
+    },
+    {
+      "namespace": "System.Windows.Forms",
+      "name": "MessageBoxButtons"
+    },
+    {
+      "namespace": "System.Windows.Forms",
+      "name": "MessageBoxIcon"
+    },
+    {
+      "namespace": "System.Runtime.CompilerServices",
+      "name": "RuntimeHelpers"
+    },
+    {
+      "namespace": "System",
+      "name": "Array"
+    },
+    {
+      "namespace": "System",
+      "name": "RuntimeFieldHandle"
+    },
+    {
+      "namespace": "System.Threading.Tasks",
+      "name": "Task"
+    },
+    {
+      "namespace": "System",
+      "name": "Environment"
+    }
+  ],
+  "types": [
+    {
+      "namespace": "",
+      "name": "<Module>",
+      "methods": []
+    },
+    {
+      "namespace": "LordsAPI",
+      "name": "LordsMobileAPI",
+      "methods": [
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "LordsAPI",
+      "name": "ImageUtils",
+      "methods": [
+        "ImageToGray"
+      ]
+    },
+    {
+      "namespace": "LordsAPI",
+      "name": "Stringtils",
+      "methods": [
+        "Format"
+      ]
+    },
+    {
+      "namespace": "LordsAPI",
+      "name": "Utils",
+      "methods": [
+        "ConvertImagePixelType",
+        "ResizeImage",
+        "TruncateLongString",
+        "Crop",
+        "PointRead",
+        "getModuleAdress",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "LordsAPI.Memory",
+      "name": "VAMemory",
+      "methods": [
+        "ReadProcessMemory",
+        "WriteProcessMemory",
+        "OpenProcess",
+        "CloseHandle",
+        "VirtualProtectEx",
+        "VirtualAllocEx",
+        "get_process",
+        "set_process",
+        "get_getBaseAddress",
+        ".ctor",
+        "CheckProcess",
+        "ReadByteArray",
+        "ReadStringUnicode",
+        "ReadStringASCII",
+        "ReadChar",
+        "ReadBoolean",
+        "ReadByte",
+        "ReadInt16",
+        "ReadShort",
+        "ReadInt32",
+        "ReadInteger",
+        "ReadInt64",
+        "ReadLong",
+        "ReadUInt16",
+        "ReadUShort",
+        "ReadUInt32",
+        "ReadUInteger",
+        "ReadUInt64",
+        "ReadULong",
+        "ReadFloat",
+        "ReadDouble",
+        "WriteByteArray",
+        "WriteStringUnicode",
+        "WriteStringASCII",
+        "WriteBoolean",
+        "WriteChar",
+        "WriteByte",
+        "WriteInt16",
+        "WriteShort",
+        "WriteInt32",
+        "WriteInteger",
+        "WriteInt64",
+        "WriteLong",
+        "WriteUInt16",
+        "WriteUShort",
+        "WriteUInt32",
+        "WriteUInteger",
+        "WriteUInt64",
+        "WriteULong",
+        "WriteFloat",
+        "WriteDouble",
+        "ErrorProcessNotFound",
+        ".cctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<PrivateImplementationDetails>",
+      "methods": []
+    },
+    {
+      "namespace": "",
+      "name": "Offsets",
+      "methods": [
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "API",
+      "methods": [
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Settings",
+      "methods": [
+        "get_GetProcess",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "ProcessUtils",
+      "methods": [
+        "GetForegroundWindow",
+        "GetWindowRect",
+        "PrintWindow",
+        "GetProgrammImage",
+        "GetProgrammRect",
+        "IsActivate",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "ProcessAccessFlags",
+      "methods": []
+    },
+    {
+      "namespace": "",
+      "name": "VirtualMemoryProtection",
+      "methods": []
+    },
+    {
+      "namespace": "",
+      "name": "__StaticArrayInitTypeSize=20",
+      "methods": []
+    },
+    {
+      "namespace": "",
+      "name": "__StaticArrayInitTypeSize=24",
+      "methods": []
+    },
+    {
+      "namespace": "",
+      "name": "__StaticArrayInitTypeSize=28",
+      "methods": []
+    },
+    {
+      "namespace": "",
+      "name": "__StaticArrayInitTypeSize=32",
+      "methods": []
+    },
+    {
+      "namespace": "",
+      "name": "Chat",
+      "methods": [
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Server",
+      "methods": [
+        "get_Version",
+        "get_IP",
+        "IPAsync",
+        "get_Nickname",
+        "NicknameAsync",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "LocalUser",
+      "methods": [
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "RECT",
+      "methods": []
+    },
+    {
+      "namespace": "",
+      "name": "Guild",
+      "methods": [
+        "get_LastMessage",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Global",
+      "methods": [
+        "get_LastMessage",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<>c",
+      "methods": [
+        ".cctor",
+        ".ctor",
+        "<IPAsync>b__4_0",
+        "<NicknameAsync>b__7_0"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<IPAsync>d__4",
+      "methods": [
+        "MoveNext",
+        "SetStateMachine"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<NicknameAsync>d__7",
+      "methods": [
+        "MoveNext",
+        "SetStateMachine"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Map",
+      "methods": [
+        "get_TropsSended",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "PromoCodes",
+      "methods": [
+        "get_All",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Auth",
+      "methods": [
+        "get_IGG_ID",
+        "IGG_IDAsync",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Statistic",
+      "methods": [
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Guild",
+      "methods": [
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "WatchTower",
+      "methods": [
+        "get_Level",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "WorkShop",
+      "methods": [
+        "get_Level",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Factory",
+      "methods": [
+        "get_Level",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Cellar",
+      "methods": [
+        "get_Level",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Wall",
+      "methods": [
+        "get_Level",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Castle",
+      "methods": [
+        "get_Level",
+        "get_DistanceToCaste",
+        "DistanceToCasteAsync",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<>c",
+      "methods": [
+        ".cctor",
+        ".ctor",
+        "<IGG_IDAsync>b__2_0"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<IGG_IDAsync>d__2",
+      "methods": [
+        "MoveNext",
+        "SetStateMachine"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Stamina",
+      "methods": [
+        "get_Count",
+        "CountAsync",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Power",
+      "methods": [
+        "get_Count",
+        "CountAsync",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Energy",
+      "methods": [
+        "get_Count",
+        "CountAsync",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Gems",
+      "methods": [
+        "get_Count",
+        "CountAsync",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Level",
+      "methods": [
+        "get_Current",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Statistic",
+      "methods": [
+        "get_Power",
+        "PowerAsync",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Shop",
+      "methods": [
+        "get_Money",
+        "MoneyAsync",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Gifts",
+      "methods": [
+        "get_Keys",
+        "KeysAsync",
+        "get_Count",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Help",
+      "methods": [
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Attack",
+      "methods": [
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Army",
+      "methods": [
+        "get_TotalCount",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Coliseum",
+      "methods": [
+        "get_Gems",
+        "GemsAsync",
+        "get_Rank",
+        "RangAsync",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "MysteryBox",
+      "methods": [
+        "get_Time",
+        "TimeAsync",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Resources",
+      "methods": [
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<>c",
+      "methods": [
+        ".cctor",
+        ".ctor",
+        "<DistanceToCasteAsync>b__7_0"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<DistanceToCasteAsync>d__7",
+      "methods": [
+        "MoveNext",
+        "SetStateMachine"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<>c",
+      "methods": [
+        ".cctor",
+        ".ctor",
+        "<CountAsync>b__2_0"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<CountAsync>d__2",
+      "methods": [
+        "MoveNext",
+        "SetStateMachine"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<>c",
+      "methods": [
+        ".cctor",
+        ".ctor",
+        "<CountAsync>b__2_0"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<CountAsync>d__2",
+      "methods": [
+        "MoveNext",
+        "SetStateMachine"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<>c",
+      "methods": [
+        ".cctor",
+        ".ctor",
+        "<CountAsync>b__2_0"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<CountAsync>d__2",
+      "methods": [
+        "MoveNext",
+        "SetStateMachine"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<>c",
+      "methods": [
+        ".cctor",
+        ".ctor",
+        "<CountAsync>b__2_0"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<CountAsync>d__2",
+      "methods": [
+        "MoveNext",
+        "SetStateMachine"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<>c",
+      "methods": [
+        ".cctor",
+        ".ctor",
+        "<PowerAsync>b__2_0"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<PowerAsync>d__2",
+      "methods": [
+        "MoveNext",
+        "SetStateMachine"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<>c",
+      "methods": [
+        ".cctor",
+        ".ctor",
+        "<MoneyAsync>b__2_0"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<MoneyAsync>d__2",
+      "methods": [
+        "MoveNext",
+        "SetStateMachine"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<>c",
+      "methods": [
+        ".cctor",
+        ".ctor",
+        "<KeysAsync>b__2_0"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<KeysAsync>d__2",
+      "methods": [
+        "MoveNext",
+        "SetStateMachine"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "OtherUser",
+      "methods": [
+        "get_Count",
+        "CountAsync",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Status",
+      "methods": [
+        "get_AttackCount",
+        "get_ScoutingCount",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Infantry",
+      "methods": [
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Archer",
+      "methods": [
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Rider",
+      "methods": [
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Ballista",
+      "methods": [
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<>c",
+      "methods": [
+        ".cctor",
+        ".ctor",
+        "<GemsAsync>b__2_0",
+        "<RangAsync>b__5_0"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<GemsAsync>d__2",
+      "methods": [
+        "MoveNext",
+        "SetStateMachine"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<RangAsync>d__5",
+      "methods": [
+        "MoveNext",
+        "SetStateMachine"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<>c",
+      "methods": [
+        ".cctor",
+        ".ctor",
+        "<TimeAsync>b__2_0"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<TimeAsync>d__2",
+      "methods": [
+        "MoveNext",
+        "SetStateMachine"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Food",
+      "methods": [
+        "get_Count",
+        "CountAsync",
+        "get_Maximum",
+        "MaximumAsync",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Stone",
+      "methods": [
+        "get_Count",
+        "CountAsync",
+        "get_Maximum",
+        "MaximumAsync",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Wood",
+      "methods": [
+        "get_Count",
+        "CountAsync",
+        "get_Maximum",
+        "MaximumAsync",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Ore",
+      "methods": [
+        "get_Count",
+        "CountAsync",
+        "get_Maximum",
+        "MaximumAsync",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Gold",
+      "methods": [
+        "get_Count",
+        "CountAsync",
+        "get_Maximum",
+        "MaximumAsync",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "Anima",
+      "methods": [
+        "get_Count",
+        "CountAsync",
+        "get_Maximum",
+        "MaximumAsync",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<>c",
+      "methods": [
+        ".cctor",
+        ".ctor",
+        "<CountAsync>b__2_0"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<CountAsync>d__2",
+      "methods": [
+        "MoveNext",
+        "SetStateMachine"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "T1",
+      "methods": [
+        "get_Count",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "T2",
+      "methods": [
+        "get_Count",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "T3",
+      "methods": [
+        "get_Count",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "T1",
+      "methods": [
+        "get_Count",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "T2",
+      "methods": [
+        "get_Count",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "T3",
+      "methods": [
+        "get_Count",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "T1",
+      "methods": [
+        "get_Count",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "T2",
+      "methods": [
+        "get_Count",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "T3",
+      "methods": [
+        "get_Count",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "T1",
+      "methods": [
+        "get_Count",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "T2",
+      "methods": [
+        "get_Count",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "T3",
+      "methods": [
+        "get_Count",
+        ".ctor"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<>c",
+      "methods": [
+        ".cctor",
+        ".ctor",
+        "<CountAsync>b__2_0",
+        "<MaximumAsync>b__5_0"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<CountAsync>d__2",
+      "methods": [
+        "MoveNext",
+        "SetStateMachine"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<MaximumAsync>d__5",
+      "methods": [
+        "MoveNext",
+        "SetStateMachine"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<>c",
+      "methods": [
+        ".cctor",
+        ".ctor",
+        "<CountAsync>b__2_0",
+        "<MaximumAsync>b__5_0"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<CountAsync>d__2",
+      "methods": [
+        "MoveNext",
+        "SetStateMachine"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<MaximumAsync>d__5",
+      "methods": [
+        "MoveNext",
+        "SetStateMachine"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<>c",
+      "methods": [
+        ".cctor",
+        ".ctor",
+        "<CountAsync>b__2_0",
+        "<MaximumAsync>b__5_0"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<CountAsync>d__2",
+      "methods": [
+        "MoveNext",
+        "SetStateMachine"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<MaximumAsync>d__5",
+      "methods": [
+        "MoveNext",
+        "SetStateMachine"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<>c",
+      "methods": [
+        ".cctor",
+        ".ctor",
+        "<CountAsync>b__2_0",
+        "<MaximumAsync>b__5_0"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<CountAsync>d__2",
+      "methods": [
+        "MoveNext",
+        "SetStateMachine"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<MaximumAsync>d__5",
+      "methods": [
+        "MoveNext",
+        "SetStateMachine"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<>c",
+      "methods": [
+        ".cctor",
+        ".ctor",
+        "<CountAsync>b__2_0",
+        "<MaximumAsync>b__5_0"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<CountAsync>d__2",
+      "methods": [
+        "MoveNext",
+        "SetStateMachine"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<MaximumAsync>d__5",
+      "methods": [
+        "MoveNext",
+        "SetStateMachine"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<>c",
+      "methods": [
+        ".cctor",
+        ".ctor",
+        "<CountAsync>b__2_0",
+        "<MaximumAsync>b__5_0"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<CountAsync>d__2",
+      "methods": [
+        "MoveNext",
+        "SetStateMachine"
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "<MaximumAsync>d__5",
+      "methods": [
+        "MoveNext",
+        "SetStateMachine"
+      ]
+    }
+  ],
+  "native_imports": [
+    {
+      "name": "ReadProcessMemory",
+      "dll": "kernel32.dll"
+    },
+    {
+      "name": "WriteProcessMemory",
+      "dll": "kernel32.dll"
+    },
+    {
+      "name": "OpenProcess",
+      "dll": "kernel32.dll"
+    },
+    {
+      "name": "CloseHandle",
+      "dll": "kernel32.dll"
+    },
+    {
+      "name": "VirtualProtectEx",
+      "dll": "kernel32.dll"
+    },
+    {
+      "name": "VirtualAllocEx",
+      "dll": "kernel32.dll"
+    },
+    {
+      "name": "GetForegroundWindow",
+      "dll": "user32.dll"
+    },
+    {
+      "name": "GetWindowRect",
+      "dll": "user32.dll"
+    },
+    {
+      "name": "PrintWindow",
+      "dll": "user32.dll"
+    }
+  ]
+}
